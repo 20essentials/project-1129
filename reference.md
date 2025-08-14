@@ -1,0 +1,2 @@
+- **Reference / Inspiration ⬇️**
+  - [Thanks to KhronosGroup for its glTF-Sample-Models](https://github.com/KhronosGroup/glTF-Sample-Models)
