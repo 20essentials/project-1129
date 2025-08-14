@@ -8,7 +8,7 @@ export default defineConfig({
   // base: './',
 
   //Deploy only with Github Pages, with Vercel is not neccesary 
-  // base: '/project-1026/',
+  base: '/project-1129/',
 
   plugins: [react()],
   resolve: {
