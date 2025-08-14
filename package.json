@@ -9,14 +9,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "start": "node server.js"
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "deploy": "pnpm gh-pages -d dist/"
   },
   "dependencies": {
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.3.0",
     "@types/three": "^0.179.0",
     "clsx": "2.1.1",
-    "express": "^5.1.0",
     "framer-motion": "12.23.0",
     "install": "^0.13.0",
     "lightswind": "3.0.2",
