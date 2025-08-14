@@ -1,19 +1,18 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { join } from "path";
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "dist")));
+// Servir la carpeta dist
+app.use(express.static(join(import.meta.dirname, "dist")));
 
+// Manejar rutas de SPA
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(join(import.meta.dirname, "dist", "index.html"));
 });
 
+// Puerto que asigna Railway
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en puerto ${PORT}`);
+  console.log(`✅ Servidor en puerto ${PORT}`);
 });
